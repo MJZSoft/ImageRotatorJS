@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ImageRotatorJS</title>
+<script src="./ImageRotator-min.js"></script>
+<script type="text/javascript">
+var imageRotater = null;
+function InitScripts(){
+ imageRotater = ImageRotatorJS('Ellipse','RotatingIcon',5,110,3000, 0, 90, 40, null);
+}
+</script>
+<style>
+body{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:1em;
+    color:#FFFFFF;
+    background-color:#000000;
+}
+h3{
+    color:#00FF00;
+}
+h4{
+    font-family:"Courier New", Courier, monospace;
+    color:#33CCFF;
+}
+#Ellipse{
+    position:relative;
+    visibility:visible;
+    z-index:1;
+    width:700px;
+    height:80px;
+    border:none;
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+.RotatingIcon{
+    border:none;
+    width:80px;
+}
+</style>
+</head>
+<body onload="InitScripts()">
+<div style="margin: auto; text-align: center">
+    <h1>Pure JavaScript Library for Image Rotating</h1>
+    <h6>Powered by MJZSoft</h6>
+</div>
+
+<div id="Ellipse">
+ <img class="RotatingIcon"  src="img/img2.png">
+ <img class="RotatingIcon"  src="img/img3.jpg">
+ <img class="RotatingIcon"  src="img/img4.jpg">
+ <img class="RotatingIcon"  src="img/img7.png">
+ <img class="RotatingIcon"  src="img/img5.jpg">
+ <img class="RotatingIcon"  src="img/img6.jpg">
+ <img class="RotatingIcon"  src="img/img1.jpg">
+</div>
+<h3>The HTML Code</h3>
+<p>
+The elements to be displayed in an ellipse are defined in the HTML code
+and must be assigned a class name which includes a unique string of characters.<br>
+These elements must be nested in a parent DIV.
+This parent DIV must be assigned a unique ID name and
+the width and height will determine the horizontal and vertical dimensions of the ellipse. For example:<br>
+<h4>&lt;div id="Ellipse" style="..."&gt;<br>
+&lt;img class="RotaitingIcon"  src="img/One.gif" width="50" height="50" style="border:solid black 1px;"&gt;<br>
+&lt;div&gt;</h4>
+</p>
+<h3>Zoom</h3>
+<p>
+Each element may be 'Zoomed'
+as it approaches the center bottom of the ellipse to give a 3D effect.
+The 'Zoom' is specified in the initialization call
+and is applied to the width, height and font size of the element.
+</p>
+<h3>Initialising the Ellipse</h3>
+<p>
+Each application would normally be initialised from a &lt;BODY&gt; or window onload event call
+to function 'ImageRotatorJS'. For example:<br>
+<h4>&lt;body onload="ImageRotatorJS('Ellipse','RotatingIcon',5,110,3000, 0, 90, 40, 'white');"&gt;</h4>
+where:
+<br>
+<br>parameter 0 =(string) {containerId}: the unique ID name of the parent DIV.
+<br>parameter 1 =(string) {elementsClass}: the unique string of element's class name to signify inclusion.
+<br>parameter 2 =(digits) {rotationSpeed}: the rotation speed, 10 = fast, 500 = slow. 10 = 0.01 second
+<br>parameter 3 =(digits) {zoomPercentage}: the element 'Zoom', 0 = no Zoom, 100 = 100% Zoom.
+<br>parameter 4 =(digits) {holdDelay}: the initial 'Hold' delay. A number in milliseconds that tells how much it has to wait between rotations.
+<br>parameter 5 =(digits) {rotationAngle}: +/- 0~360 degree. If we assume a Z axis orthogonal to the screen, then 45 degrees cause to sloop images to the screen
+<br>parameter 6 =(digits) {startAngle}: +/- 0-360 degree. The initial position of the first image.
+<br>parameter 7 =(digits) {reflectionPercentage}: 0~100. The amount of reflection of images
+<br>parameter 8 =(string) {circumferenceDotsColor}: (optional) the color of the circumference (dotted), more uses for development purposes.
+</p>
+<h3>Controlling the Rotation</h3>
+<p>
+There are two functions to control the rotation, 'IRJS_StartRotation' and 'IRJS_StopRotation'
+<h3>function 'IRJS_StopRotation'</h3>
+Calling this function will stop the ellipse rotation. e.g:<br>
+<h4>&lt;input type="button" name="" value="Stop" onmouseover="IRJS_StopRotation('Ellipse1');"&gt;</h4>
+where:
+<br>
+<br>parameter 0 =(string) the unique ID name of the parent DIV.
+
+<h3>function 'IRJS_StartRotation'</h3>
+Calling this function will rotate the ellipse to an incremental point. e.g :<br>
+<h4>&lt;input type="button" name="" value="Next" onclick="IRJS_StartRotation('Ellipse1',1);"&gt;<br>
+&lt;input type="button" name="" value="Back" onclick="IRJS_StartRotation('Ellipse1',-1);"&gt;</h4>
+where:
+<br>
+<br>parameter 0 =(string) the unique ID name of the parent DIV.
+<br>parameter 1 =(1 | -1) the direction of rotation, 1 = clockwise, -1 = anti clockwise.
+<br>parameter 2 =(digits) (optional) to change the 'Hold' delay.
+<br>
+<br>
+
+There are two similar functions with names 'startRotation' and 'stopRotation' that you can call on ImageRotatorJS object to start or stop the
+rotation. Just you don't need to pass the id of the element but the rest arguments are needed.
+
+
+</p>
+</body>
+
+</html>
