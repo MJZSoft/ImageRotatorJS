@@ -19,7 +19,7 @@ http://www.bishopimage.com/banner.swf
 
 This was a pretty good encouragement for me to create a pure JavaScript library that does the same work. ImageRotaterJS is a pure lightweight JavaScript library that helps you to create beautiful banners for your website.  
 
-The source of the images that were used inside of this project is http://bishop.digital/ and we used the same images as they had used in their flash file to make it comparable. 
+The source of the images that were used inside of the above picture is http://bishop.digital/ and we used the same images as they had used in their flash file to make it comparable. We tried to get a permission from them for keeping the images inside of the img folder of this project but we have not yet received any answer. Thus we removed them and we are still waiting for any kind of answer for confirming or rejecting the use of their images inside of our live demo.
 
 You can easily find the current version minified file in the following address:
 
