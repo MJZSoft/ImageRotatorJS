@@ -11,7 +11,7 @@ www.bishopimage.com/index.html
 
 They had a very beautiful image rotator inside of their website as a banner. Currently, they changed the website design and if you go to the above address mostly you cannot visit the image rotator that I saw. Thus, I made a video from their website which you can find it at the following address:
 
-https://www.youtube.com/watch?v=2TKZrxnqpZA
+https://www.youtube.com/watch?v=JTp3ImJlkVw
 
 Anyway if you were lucky you can visit the banner itself in the following address:
 
